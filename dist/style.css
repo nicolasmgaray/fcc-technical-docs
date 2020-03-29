@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700|Noto+Sans&display=swap");
+
+:root {
+  --color-main: #39f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+header {
+  font-family: "Maven Pro";
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+body {
+  display: grid;
+  grid-template: "nav main" auto / 18em 1fr;
+}
+
+#navbar {
+  grid-area: nav;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: #202020;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+#navbar header {
+  color: white;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-main);
+}
+
+.divider {
+  background-color: var(--color-main);
+  width: 100%;
+  padding: 2em;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  width: 100%;
+}
+
+li {
+  width: 100%;
+}
+
+.nav-link {
+  display: block;
+  padding: 1.5em;
+  color: white;
+}
+
+#main-doc {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  padding: 1.5em;
+  font-size: 1.2em;
+}
+
+section::after {
+  content: "";
+  display: block;
+ 
+  border-bottom: 0.1em solid var(--color-main);
+  margin-top: 2em;
+}
+
+section header {
+  margin-bottom: 1em;
+}
+
+code {
+  display: block;
+  text-align: left; 
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+
+
+@media (max-width: 900px) {
+  body {
+    grid-template:
+      "nav " auto
+      " main" auto/ 100%;
+  }
+
+  
+#navbar {
+    grid-area: nav;
+    height: 20em;
+    position: sticky;
+    top: 0;
+    background: #202020;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}
